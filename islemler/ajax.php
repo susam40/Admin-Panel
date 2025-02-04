@@ -23,13 +23,6 @@ if (isset($_POST['ayarkaydet'])) {
         'site_mail_sifre' => $_POST['site_mail_sifre']
     ));
 
-
-    if ($sonuc) {
-        header("location:../ayarlar.php?durum=success");
-    } else {
-        header("location:../ayarlar.php?durum=error");
-    }
-
     if ($_FILES['site_logo']['error'] == "0") {
         // dosya yükleme olmaz ise herhangi bir değişiklik yapmma yükleme başarılı olursa db değiştir
         $gecici_isim = $_FILES['site_logo']['tmp_name'];
@@ -43,6 +36,15 @@ if (isset($_POST['ayarkaydet'])) {
             'site_logo' => $dosya_ismi,
         ));
     }
+
+    if ($sonuc) {
+        header("location:../ayarlar.php?durum=success");
+    } else {
+        header("location:../ayarlar.php?durum=error");
+    }
+    exit;
+
+
 }
 
 
