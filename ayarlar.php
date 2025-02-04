@@ -11,7 +11,7 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                     <h5 class="font-weight-bold text-primary">Ayarlar</h5>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST" accept-charset="utf-8">
+                    <form action="islemler/ajax.php" method="POST" accept-charset="utf-8">
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Site Logo</label>
@@ -77,7 +77,7 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             </div>
                         </div>
                         <div class=" form-row">
-                            <button type="button" class="btn btn-primary">Kaydet</button>
+                            <button type="submit" class="btn btn-primary" name="ayarkaydet">Kaydet</button>
                         </div>
                     </form>
                 </div>
