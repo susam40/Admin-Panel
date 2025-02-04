@@ -1,4 +1,10 @@
-<?php include 'header.php' ?>
+<?php include 'header.php';
+$sorgu = $db->prepare("SELECT * FROM ayarlar");
+// ayarlar tablosundan bütün verileri çeker
+$sorgu->execute();
+$ayar = $sorgu->fetch(PDO::FETCH_ASSOC);
+?>
+
 <!-- içeriye dosya aktarir.(require)
 include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya devam eder.
 @konulursa hatayi göstermez. -->
@@ -21,50 +27,58 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Site Başlık</label>
-                                <input type="text" class="form-control" name="site_baslik">
+                                <input type="text" class="form-control" name="site_baslik"
+                                    value="<?php echo $ayar['site_baslik'] ?>">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Site Açıklama</label>
-                                <input type="text" class="form-control" name="site_aciklama">
+                                <input type="text" class="form-control" name="site_aciklama"
+                                    value="<?php echo $ayar['site_aciklama'] ?>">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Site Link</label>
-                                <input type="text" class="form-control" name="site_link">
+                                <input type="text" class="form-control" name="site_link"
+                                    value="<?php echo $ayar['site_link'] ?>">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Site Sahibinin Mail Adresi</label>
-                                <input type="text" class="form-control" name="site_sahip_mail">
+                                <input type="text" class="form-control" name="site_sahip_mail"
+                                    value="<?php echo $ayar['site_sahip_mail'] ?>">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Mail Host Adresi</label>
-                                <input type="text" class="form-control" name="site_mail_host">
+                                <input type="text" class="form-control" name="site_mail_host"
+                                    value="<?php echo $ayar['site_mail_host'] ?>">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Mail Adresi</label>
-                                <input type="text" class="form-control" name="site_mail_mail">
+                                <input type="text" class="form-control" name="site_mail_mail"
+                                    value="<?php echo $ayar['site_mail_mail'] ?>">
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Mail Port Numarası</label>
-                                <input type="text" class="form-control" name="site_mail_port">
+                                <input type="text" class="form-control" name="site_mail_port"
+                                    value="<?php echo $ayar['site_mail_port'] ?>">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Mail Şifresi</label>
-                                <input type="text" class="form-control" name="site_mail_sifre">
+                                <input type="text" class="form-control" name="site_mail_sifre"
+                                    value="<?php echo $ayar['site_mail_sifre'] ?>">
                             </div>
                         </div>
                         <div class=" form-row">
