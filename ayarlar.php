@@ -1,9 +1,4 @@
-<?php include 'header.php';
-$sorgu = $db->prepare("SELECT * FROM ayarlar");
-// ayarlar tablosundan bütün verileri çeker
-$sorgu->execute();
-$ayar = $sorgu->fetch(PDO::FETCH_ASSOC);
-?>
+<?php include 'header.php' ?>
 
 <!-- içeriye dosya aktarir.(require)
 include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya devam eder.
@@ -28,7 +23,7 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             <div class="col-md-6 form-group">
                                 <label>Site Başlık</label>
                                 <input type="text" class="form-control" name="site_baslik"
-                                    value="<?php echo $ayar['site_baslik'] ?>">
+                                    value="<?php echo $ayarcek['site_baslik'] ?>">
                             </div>
                         </div>
 
@@ -36,7 +31,7 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             <div class="col-md-6 form-group">
                                 <label>Site Açıklama</label>
                                 <input type="text" class="form-control" name="site_aciklama"
-                                    value="<?php echo $ayar['site_aciklama'] ?>">
+                                    value="<?php echo $ayarcek['site_aciklama'] ?>">
                             </div>
                         </div>
 
@@ -44,7 +39,7 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             <div class="col-md-6 form-group">
                                 <label>Site Link</label>
                                 <input type="text" class="form-control" name="site_link"
-                                    value="<?php echo $ayar['site_link'] ?>">
+                                    value="<?php echo $ayarcek['site_link'] ?>">
                             </div>
                         </div>
 
@@ -52,7 +47,7 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             <div class="col-md-6 form-group">
                                 <label>Site Sahibinin Mail Adresi</label>
                                 <input type="text" class="form-control" name="site_sahip_mail"
-                                    value="<?php echo $ayar['site_sahip_mail'] ?>">
+                                    value="<?php echo $ayarcek['site_sahip_mail'] ?>">
                             </div>
                         </div>
 
@@ -60,12 +55,12 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             <div class="col-md-6 form-group">
                                 <label>Mail Host Adresi</label>
                                 <input type="text" class="form-control" name="site_mail_host"
-                                    value="<?php echo $ayar['site_mail_host'] ?>">
+                                    value="<?php echo $ayarcek['site_mail_host'] ?>">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Mail Adresi</label>
                                 <input type="text" class="form-control" name="site_mail_mail"
-                                    value="<?php echo $ayar['site_mail_mail'] ?>">
+                                    value="<?php echo $ayarcek['site_mail_mail'] ?>">
                             </div>
                         </div>
 
@@ -73,12 +68,12 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                             <div class="col-md-6 form-group">
                                 <label>Mail Port Numarası</label>
                                 <input type="text" class="form-control" name="site_mail_port"
-                                    value="<?php echo $ayar['site_mail_port'] ?>">
+                                    value="<?php echo $ayarcek['site_mail_port'] ?>">
                             </div>
                             <div class="col-md-6 form-group">
                                 <label>Mail Şifresi</label>
                                 <input type="text" class="form-control" name="site_mail_sifre"
-                                    value="<?php echo $ayar['site_mail_sifre'] ?>">
+                                    value="<?php echo $ayarcek['site_mail_sifre'] ?>">
                             </div>
                         </div>
                         <div class=" form-row">
