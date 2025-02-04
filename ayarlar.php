@@ -11,7 +11,8 @@ include ile require farki, include de dosya varsa içeri aktarir yoksa calismaya
                     <h5 class="font-weight-bold text-primary">Ayarlar</h5>
                 </div>
                 <div class="card-body">
-                    <form action="islemler/ajax.php" method="POST" accept-charset="utf-8">
+                    <form action="islemler/ajax.php" method="POST" accept-charset="utf-8" enctype="multipart/form-data">
+                        <!-- enctype="multipart/form-data formdan resim yollamak için kullanılır. -->
                         <div class="form-row">
                             <div class="col-md-6 form-group">
                                 <label>Site Logo</label>
