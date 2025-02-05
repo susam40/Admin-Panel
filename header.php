@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'islemler/baglan.php' ?>
+<?php
+include 'islemler/baglan.php';
+include 'fonksiyonlar.php';
+oturumkontrol();
+?>
+
 
 <head>
 
@@ -177,8 +182,8 @@
                             <div class="modal-body">Çıkmak İstediğine Emin Misiniz?
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Vazgeç</button>
-                                <a class="btn btn-primary" href="login.html">Çıkış Yap</a>
+                                <a class="btn btn-secondary" type="button" data-dismiss="modal" href="#">Vazgeç</a>
+                                <a class="btn btn-primary" href="islemler/cikis.php">Çıkış Yap</a>
                             </div>
                         </div>
                     </div>

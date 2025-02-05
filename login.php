@@ -1,4 +1,4 @@
-<?php include "islemler/baglan.php" ?>
+<?php include "islemler/baglan.php"; ?>
 
 <!DOCTYPE html>
 <html lang="en">

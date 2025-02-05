@@ -1,8 +1,5 @@
 <?php
-if (!session_start()) {
-    session_start();
-}
-
+session_start();
 $host = "localhost";
 $veritabani_ismi = "kursayarlar";
 $kullanici_adi = "root";

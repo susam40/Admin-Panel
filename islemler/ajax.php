@@ -57,7 +57,8 @@ if (isset($_POST['oturumacma'])) {
         header("location:../index.php?durum=error");
     } else {
         $_SESSION['kul_isim'] = $kullanici['kul_isim'];
-        $_SESSION['kul_mail'] = $kullanici['mail'];
+        $_SESSION['kul_mail'] = $kullanici['kul_mail'];
+        $_SESSION['kul_id'] = $kullanici['kul_id'];
         header("location:../index.php?durum=success");
 
     }
