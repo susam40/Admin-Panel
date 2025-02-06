@@ -63,8 +63,36 @@ if (isset($_POST['oturumacma'])) {
 
     }
     exit;
+}
 
+if (isset($_POST['profilkaydet'])) {
+    $sorgu = $db->prepare("UPDATE kullanicilar SET
+        kul_isim=:kul_isim,
+        kul_mail=:kul_mail,
+        kul_telefon=:kul_telefon WHERE kul_id=:kul_id
+    ");
+    $sonuc = $sorgu->execute(array(
+        'kul_isim' => $_POST['kul_isim'],
+        'kul_mail' => $_POST['kul_mail'],
+        'kul_telefon' => $_POST['kul_telefon'],
+        'kul_id' => $_SESSION['kul_id']
 
+    ));
+
+    if (strlen($_POST['kul_sifre']) > 0) {
+        $sorgu = $db->prepare("UPDATE kullanicilar SET kul_sifre=:kul_sifre WHERE kul_id=:kul_id");
+        $sonuc = $sorgu->execute(array(
+            'kul_sifre' => md5($_POST['kul_sifre']),
+            'kul_id' => $_SESSION['kul_id']
+
+        ));
+    }
+
+    if ($sonuc) {
+        header("location:../profil.php?durum=success");
+    } else {
+        header("location:../profil.php?durum=error");
+    }
 
 }
 

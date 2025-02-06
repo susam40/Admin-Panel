@@ -12,11 +12,9 @@ oturumkontrol();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-
     <title><?php echo $ayarcek['site_baslik']; ?></title>
+    <link rel="shortcut icon" type="image/png" href="dosyalar/<?php echo $ayarcek['site_logo']; ?>">
+    <!-- icon eklenir -->
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -50,7 +48,7 @@ oturumkontrol();
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="index.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Ana Sayfa</span></a>
             </li>
@@ -86,6 +84,11 @@ oturumkontrol();
                 <a class="nav-link" href="ayarlar.php">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Ayarlar</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="profil.php">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Profil</span></a>
             </li>
 
             <!-- Divider -->
@@ -144,16 +147,17 @@ oturumkontrol();
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Susam Arslan</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile_3.svg">
+                                <img class="img-profile rounded-circle"
+                                    src="dosyalar/<?php echo $ayarcek['site_logo']; ?>"">
                             </a>
                             <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                            <div class=" dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="profil.php">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profil
                                 </a>
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="ayarlar.php">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Ayarlar
                                 </a>
@@ -162,29 +166,29 @@ oturumkontrol();
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Çıkış
                                 </a>
-                            </div>
-                        </li>
+            </div>
+            </li>
 
-                    </ul>
+            </ul>
 
-                </nav>
-                <!-- Logout Modal-->
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Oturumu Kapat</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">Çıkmak İstediğine Emin Misiniz?
-                            </div>
-                            <div class="modal-footer">
-                                <a class="btn btn-secondary" type="button" data-dismiss="modal" href="#">Vazgeç</a>
-                                <a class="btn btn-primary" href="islemler/cikis.php">Çıkış Yap</a>
-                            </div>
+            </nav>
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Oturumu Kapat</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Çıkmak İstediğine Emin Misiniz?
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-secondary" type="button" data-dismiss="modal" href="#">Vazgeç</a>
+                            <a class="btn btn-primary" href="islemler/cikis.php">Çıkış Yap</a>
                         </div>
                     </div>
                 </div>
+            </div>
